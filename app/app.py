@@ -14,5 +14,9 @@ def hello():
     return render_template(
         'user.html', **locals())
  
+@app.route("/template/")
+def template():
+    return render_template('child.html')
+
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=8080)
